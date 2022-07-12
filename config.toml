@@ -1,0 +1,100 @@
+# The URL the site will be built for
+base_url = "https://datablog.ru"
+
+title = "Data Blog"
+description = "A Gumin Blog"
+
+theme = "papaya"
+
+default_language = "ru"
+
+output_dir = "public"
+
+ignored_content = ["*.{graphml,xlsx}", "temp.*"]
+
+compile_sass = true
+minify_html = false
+
+generate_feed = false
+feed_filename = "atom.xml"
+# The number of articles to include in the feed. All items are included if
+# this limit is not set (the default).
+# feed_limit = 20
+hard_link_static = false
+
+taxonomies = [
+    { name = "categories" },
+    { name = "tags" },
+]
+
+build_search_index = true
+
+
+
+[markdown]
+highlight_code = true
+highlight_theme = "nord"
+smart_punctuation = true
+
+
+[languages]
+
+[languages.ru]
+title = "📈 Data. Dev. Agile. Blog"
+description = "Arsen Gumin personal blog"
+generate_feed = true
+feed_filename = "atom.xml"
+
+[languages.ru.translations]
+projects = "Projects"
+blog = "Blog"
+about = "About me"
+resume = "Резюме"
+recent_projects = "Недавние проекты"
+more_projects = "больше"
+recent_blog_posts = "Недавние публикации"
+more_blog_posts = "Больше публикаций"
+tag = "Tag"
+tags = "Tags"
+to_all_tags = "All Tags"
+category = "Категория"
+categories = "Категории"
+to_all_categories = "Все категории"
+view_by = "View by"
+other = "Other"
+minute = "min"
+prev_page = "To newer posts"
+next_page = "To older posts"
+# Customize your post date format. See: https://tera.netlify.app/docs/#date
+date_format = "%B %e, %Y"
+
+
+[extra]
+# Put all your custom variables here
+menu_items = [
+   { name = "projects", url = "$LANG_BASE_URL/projects", show_recent = true, recent_items = 3, recent_trans_key = "recent_projects", more_trans_key = "more_projects" },
+   { name = "blog", url = "$LANG_BASE_URL/blog", show_recent = true, recent_items = 3, recent_trans_key = "recent_blog_posts", more_trans_key = "more_blog_posts" },
+   { name = "tags", url = "$LANG_BASE_URL/tags" },
+   { name = "about", url = "$LANG_BASE_URL/about" },
+]
+
+
+[extra.images]
+max_width = 2500
+
+[extra.ogp]
+locale = "ru_RU"
+first_name = "Arsen"
+last_name = "Gumin"
+gender = "male"
+username = "argo"
+
+[extra.social]
+email = "gumin@live.ru"
+github = "Argo3V5A"
+telegram = ""
+other = ""
+
+# CDN links
+[extra.cdn]
+font_awesome = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
